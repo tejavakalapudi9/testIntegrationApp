@@ -1,6 +1,5 @@
 // @flow
 import * as React from 'react';
-import Header from '../components/Header';
 
 type Props = {
   children: React.Node

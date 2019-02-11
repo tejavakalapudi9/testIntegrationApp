@@ -7,15 +7,13 @@ import AppsPage from './containers/AppsPage';
 import SettingsPage from './containers/SettingsPage';
 import LoginScreen from './containers/LoginScreen';
 
-export default () => {
-  return (
-    <App>
-      <Switch>
-        <Route exact path={routes.LOGINSCREEN} component={LoginScreen} />
-        <Route exact path={routes.DASHBOARD} component={Dashboard} />
-        <Route path={routes.APPS} component={AppsPage} />
-        <Route path={routes.SETTINGS} component={SettingsPage} />
-      </Switch>
-    </App>
-  );
-};
+export default () => (
+  <App>
+    <Switch>
+      <Route exact path={routes.LOGINSCREEN} component={LoginScreen} />
+      <Route exact path={routes.DASHBOARD} component={Dashboard} />
+      <Route path={routes.APPS} component={AppsPage} />
+      <Route path={routes.SETTINGS} component={SettingsPage} />
+    </Switch>
+  </App>
+);

@@ -1,5 +1,5 @@
 // @flow
-import type { GetState, Dispatch } from '../reducers/types';
+import type { Dispatch } from '../reducers/types';
 
 export const SELECT_ARTIST = 'SELECT_ARTIST';
 export const SET_ARTISTS = 'SET_ARTISTS';
@@ -19,9 +19,8 @@ export function setArtists(payload: []) {
 }
 
 export function fetchListOfArtists() {
-  return (dispatch: Dispatch, getState: GetState) => {
-    const artists = []; //Will be replaced by an api call
-
+  return (dispatch: Dispatch) => {
+    const artists = []; // Will be replaced by an api call
     dispatch(setArtists(artists));
   };
 }

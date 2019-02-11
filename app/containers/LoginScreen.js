@@ -23,6 +23,7 @@ export default class LoginScreen extends Component<Props> {
             <img
               src={MacFrameImage}
               srcSet={`${MacFrameImage} 1x, ${MacFrameImage2X} 2x`}
+              alt="Mac Frame"
               className="mac__template"
             />
           </div>

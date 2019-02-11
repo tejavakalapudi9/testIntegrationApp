@@ -5,7 +5,7 @@ import GoogleLoginButton from '../assets/Google_signin_button/btn_google_signin_
 const LoginWidget = () => (
   <div className="login__container">
     <div>
-      <img src={BBLogo} className="login__logo" />
+      <img src={BBLogo} alt="BeatBizz" className="login__logo" />
     </div>
     <input
       type="image"
