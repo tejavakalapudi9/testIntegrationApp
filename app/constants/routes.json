@@ -1,0 +1,6 @@
+{
+  "LOGINSCREEN": "/",
+  "DASHBOARD": "/dashboard",
+  "APPS": "/apps",
+  "SETTINGS": "/settings"
+}

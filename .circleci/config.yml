@@ -1,0 +1,26 @@
+version: 2
+jobs: # a collection of steps
+  build:
+    working_directory: ~/beatbizz-app
+    docker:
+      - image: circleci/node:10.13.0
+      - image: mongo:3.4.4
+    steps: # a collection of executable commands
+      - checkout
+      - run:
+          name: update-yarn
+          command: 'sudo yarn upgrade'
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys: yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: sudo yarn install --frozen-lockfile
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: Package and Publish
+          command: sudo yarn run package-win
