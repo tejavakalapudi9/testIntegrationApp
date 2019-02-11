@@ -35,8 +35,6 @@ matrix:
       env:
         - ELECTRON_CACHE=$HOME/.cache/electron
         - ELECTRON_BUILDER_CACHE=$HOME/.cache/electron-builder
-        - AWS_ACCESS_KEY_ID=AKIAI5QQMAASG3UNZBSA
-        - AWS_SECRET_ACCESS_KEY=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
 
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
