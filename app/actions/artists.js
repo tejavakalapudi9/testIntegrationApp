@@ -4,14 +4,14 @@ import type { GetState, Dispatch } from '../reducers/types';
 export const SELECT_ARTIST = 'SELECT_ARTIST';
 export const SET_ARTISTS = 'SET_ARTISTS';
 
-export function selectArtist(payload) {
+export function selectArtist(payload: string) {
   return {
     type: SELECT_ARTIST,
     payload
   };
 }
 
-export function setArtists(payload) {
+export function setArtists(payload: []) {
   return {
     type: SET_ARTISTS,
     payload

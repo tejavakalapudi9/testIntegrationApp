@@ -7,7 +7,7 @@ const defaultState = {
   selectedArtist: ''
 };
 
-export default function artists(state: state = defaultState, action: Action) {
+export default function artists(state: {} = defaultState, action: Action) {
   switch (action.type) {
     case SET_ARTISTS:
       return { ...state, artists: action.payload };
