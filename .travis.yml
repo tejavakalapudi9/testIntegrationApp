@@ -50,6 +50,7 @@ cache:
 
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then export CXX="g++-8"; fi
+  - yarn install --network-timeout 1000000
 
 install:
   - yarn --ignore-engines
